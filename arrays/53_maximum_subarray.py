@@ -1,11 +1,13 @@
-class Solution(object):  # Kadane algo linear. others lead to TLE (cubic and quadratic)
-    def maxSubArray(self, nums):
-        m = -100000
+from typing import List
+
+
+class Solution:  # Kadane algorithm O(n), O(1)
+    def maxSubArray(self, nums: List[int]) -> int:
         s = 0
-        for i in range(len(nums)):
-            s += nums[i]
-            m = max(s, m)
+        maxSum = -100000
+        for num in nums:
+            s += num
+            maxSum = max(maxSum, s)
             if s < 0:
                 s = 0
-
-        return m
+        return maxSum
