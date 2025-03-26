@@ -17,7 +17,7 @@ class Solution:  # O(n), O(1)
                 r -= 1
 
 
-class AnotherSolution:
+class AnotherSolution:  # O(n), O(1)
     def sortColors(self, nums: List[int]) -> None:
         size = 3
         count = [0] * size
