@@ -1,6 +1,7 @@
 from typing import List
 
 
+# AID: Kadane's Algorithm
 class Solution1:
     def maxSubArray(self, nums: List[int]) -> int:
         max_sum = float("-inf")
